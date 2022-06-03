@@ -1,0 +1,46 @@
+<!--index.html-->
+
+<!--Embed the header.html template at this location-->
+{{ template "header.html" .}}
+
+<!--Loop over the `payload` variable, which is the list of articles-->
+
+{{range .dialogs }}
+
+
+
+<div class="list-group">
+    <a href="/messages/view/{{.Id}}" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+            <h4 class="mb-1">{{.Title}}</h4>
+            {{if eq .Platform "vk"}}
+            <img src="https://processmi.com/wp-content/uploads/2022/01/vk-process-mining.png" width="35" height="27">
+            {{end}}
+            {{if eq .Platform "telega"}}
+            <img src="https://government-nnov.ru/_data/objects/0029/8194/view_icon_photo.png?1648484688" width="30" height="30">
+            {{end}}
+        </div>
+        <p class="mb-1">{{.LastMessage}}</p>
+    </a>
+</div>
+
+
+
+<!--<div class="message">-->
+<!--    <a href="/messages/view/{{.Id}}">-->
+<!--        <span></span>-->
+
+<!--    <h2>{{.Title}}</h2>-->
+<!--    </a>-->
+
+<!--    <p>{{.LastMessage}}</p>-->
+<!--</div>-->
+<!--<br>-->
+{{end}}
+
+
+
+
+
+
+{{ template "footer.html" .}}

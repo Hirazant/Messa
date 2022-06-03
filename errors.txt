@@ -1,0 +1,5 @@
+[ 1][t 4][1653491111.933916568][MessagesManager.cpp:12135][#1][!UpdatesManager]	Have unknown 10 unread messages up to server message 5111 in chat -1001548097044 with last_new_message_id = server message 5073, last_message_id = server message 5073, last_database_message_id = server message 5073 from fix_new_dialog 12
+[ 1][t 4][1653503359.930269718][MessagesManager.cpp:34516][#1][!Td]	Can't attach server message 1780 from updateEditChannelMessage from server before server message 1787 and after server message 1707 in chat -1001515003589
+[ 1][t 4][1653591396.795025825][StickersManager.cpp:6508][#1][!Td][&recent_stickers_hash_[is_attached] != stickers->hash_]	Stickers hash mismatch
+[ 1][t 4][1653591398.861945152][StickersManager.cpp:3083][#1][!Td]	Wrong sticker set size 33 instead of 31 specified in sticker set 1391391008142393345/HotCherry from GetStickerSetQuery
+[ 1][t 4][1653591398.862726926][StickersManager.cpp:3094][#1][!Td]	Receive empty emoji in sticker set 741738897809080323/Patriarch from GetStickerSetQuery

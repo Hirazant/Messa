@@ -1,0 +1,43 @@
+<!--Embed the header.html template at this location-->
+{{ template "header.html" .}}
+
+<!--Display the title of the article-->
+<h2>{{.title}}</h2>
+
+<!--Display the content of the article-->
+
+<ul id="chat" class="chat">
+{{range .data}}
+
+
+    <li class="you">
+        <div class="entete">
+<!--            <span class="status green"></span>-->
+            <h2>{{.MessageAuthor}}</h2>
+        </div>
+        <div class="message">
+            {{.MessageText}}
+        </div>
+    </li>
+
+
+
+<!--<h3>{{.MessageAuthor}}</h3>-->
+<!--<p>{{.MessageText}}</p>-->
+{{end}}
+</ul>
+
+<div class="panel panel-default col-sm-12">
+<form class="form" name="message">
+    <div class="formGroup">
+        <input type="hidden" name="idString" value={{.id}} />
+        <input type="hidden" name="platform" value={{.platform}} />
+        <label for="message">Message</label>
+        <input type="text" class="form-control" id="message" name="message" placeholder="message">
+    </div>
+    <button type="submit" id="submit" onclick="btnClick();" href=/messages/view/{{.id}}>Отправить</button>
+</form>
+</div>
+
+<!--Embed the footer.html template at this location-->
+{{ template "footer.html" .}}
